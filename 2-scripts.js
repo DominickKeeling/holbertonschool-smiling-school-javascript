@@ -68,15 +68,9 @@ jQuery(document).ready(function () {
     const slides = data.map((card, index) => generatePopularSlide(card, index === 0)).join('');
     cardContainer.append(slides);
 
-    console.log('Slides are added to the carousel');
-
-    $('.slick-carousel').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-
+    console.log('Slides are added to the carousel')
   })
+
   .fail(function (error) {
     console.log('API  request failed', error);
     loader.hide();
