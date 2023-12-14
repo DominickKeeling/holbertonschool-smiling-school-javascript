@@ -186,33 +186,6 @@
   }
 }
 
-
-.loader {
-  border: 10px solid #f3f3f3; /* Light grey border */
-  border-top: 10px solid #C271FF; /* Main color border */
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-}
-
-.loader2 {
-  border: 10px solid #C271FF; /* Light grey border */
-  border-top: 10px solid #f3f3f3; /* Main color border */
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-}
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 /* Quotes Section  */
 
 .quotes {
@@ -308,6 +281,32 @@
     padding-top: 24px;
   }
 }
+
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #C271FF; /* Purple */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.loader2 {
+  border: 10px solid #C271FF; /* Light grey border */
+  border-top: 10px solid #f3f3f3; /* Main color border */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 /* POPULAR SECTION  */
 
@@ -419,6 +418,16 @@
     top: 5%;
   }
 }
+
+.card-footer {
+  background-color: transparent; /* Removes gray background */
+}
+
+.rating img {
+  width: 20px; /* Adjusts the size of the stars */
+  height: auto; /* Maintains the aspect ratio of the stars */
+}
+
 
 /* SMILES Section  */
 
@@ -747,6 +756,16 @@
   }
 }
 
+/* Quotes Carousel */
+
+.author-pic {
+  width: 40px; /* Desired width */
+  height: 40px; /* Desired height */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image covers the area without being stretched */
+}
+
+
 /* ==============================================================
 ==============================================================
 ============================================================== */
@@ -925,5 +944,25 @@
 
   .results .card {
     width: 90vw;
+  }
+}
+
+/* Ensure that the cards have padding and margin */
+.card {
+  margin: 0 15px; /* Adjust the margin as needed */
+}
+
+/* Responsive adjustments for the carousel */
+@media (max-width: 768px) {
+  /* For tablet */
+  .carousel-item .col-md-6 {
+    max-width: 50%; /* Show 2 cards in a row */
+  }
+}
+
+@media (max-width: 576px) {
+  /* For mobile */
+  .carousel-item .col-12 {
+    max-width: 100%; /* Show 1 card in a row */
   }
 }
